@@ -1,0 +1,329 @@
+/*JEFF HOPPER
+CARA FEA FINAL PROJECT
+GA ATL FEWD9*/
+
+
+/*apply master html font size and rem/em font values for responsive design*/
+
+
+/* APPLY PARALLAX */
+
+
+/*
+*
+*
+*/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: url(../images/CF-header-background-bar.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    margin: auto;
+    display: block;
+    border-bottom: 10px solid #DD5A5A;
+    position: relative;
+}
+
+#menuButton {
+    position: relative;
+    display: block;
+    float: left;
+    height: 635px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+button#plus {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+    outline: none;
+    transition: transform 0.5s;
+}
+
+.rotate {
+    transform: rotate(315deg);
+}
+
+ul#menu {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    transition: all 0.5s;
+    height: 0;
+    display: block;
+    overflow: hidden;
+}
+
+ul#menu.show {
+    height: 60px;
+}
+
+ul#menu li {
+    display: inline-block;
+    padding: 15px 60px 5px 60px;
+    height: 60px;
+    font-size: 25px;
+    color: #DD5A5A;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+ul#menu li:hover {
+    color: white;
+    background-color: #DD5A5A;
+}
+
+div#title {
+    display: block;
+    background-color: transparent;
+    height: 635px;
+    margin: 0 auto;
+    width: 650px;
+    position: relative;
+    top: 70px;
+    float: right;
+}
+
+div#borderbottom {
+    border-bottom: 2px solid white;
+    width: 590px;
+    position: relative;
+    float: right;
+}
+
+h1 {
+    color: white;
+    font-size: 70px;
+    margin-bottom: 20px;
+    margin-top: 185px;
+}
+
+#title p {
+    color: white;
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+div#scrollButton {
+    padding: 30px;
+    clear: both;
+    position: absolute;
+    bottom: 0px;
+    left: 590px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*SCROLL BUTTON*/
+
+button#scroll {
+    font-size: 50px;
+    height: 70px;
+    width: 70px;
+    border-radius: 40px;
+    border: 3px solid white;
+    color: #EA3838;
+    background-color: transparent;
+    transform: rotate(-90deg);
+    display: block;
+    margin: 0 auto;
+    outline: none;
+}
+
+#scroll:hover {
+    color: #18A5F2;
+}
+
+
+/*ABOUT SECTION*/
+
+section#center {
+    background-image: url(../images/japan-street-B&W.jpg);
+    background-size: cover;
+    height: 800px;
+    border-top: 60px solid white;
+    border-bottom: 60px solid white;
+}
+
+div#about {
+    width: 900px;
+    display: block;
+    position: relative;
+    margin: 100px auto;
+    overflow: auto;
+}
+
+div#theseGuys {
+    position: relative;
+    float: left;
+    width: 500px;
+    margin: 0;
+}
+
+div#theseGuys h1 {
+    font-size: 70px;
+    color: #DD5A5A;
+    margin-top: 80px;
+}
+
+div#theseGuys p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+img#polaroid {
+    display: block;
+    float: right;
+    max-width: 250px;
+    margin: 60px;
+    position: relative;
+}
+
+
+/*VIDEO*/
+
+section#video {
+    display: block;
+    /*PHOTO PLACE HOLDER*/
+    background-image: url(../images/dillandgonz.jpg);
+    background-size: cover;
+    margin: 0 auto;
+}
+
+#skate {
+    display: block;
+    margin: 0 auto;
+    padding: 150px;
+    position: relative;
+    width: 750px;
+    text-align: center;
+    color: white;
+}
+
+#skate h1 {
+    font-size: 70px;
+}
+
+#skate p {
+    font-size: 20px;
+}
+
+#skate p#links {
+    font-size: 50px;
+    color: #DD5A5A;
+    font-weight: bold;
+    margin: 20px;
+}
+
+p#links a:hover {
+    color: #18A5F2;
+}
+
+#skate a {
+    color: #DD5A5A;
+    text-decoration: none;
+}
+
+#skate a:visited {
+    text-decoration: none;
+    color: #DD5A5A;
+}
+
+
+/*FOOTER*/
+
+footer {
+    width: 1300px;
+    overflow: auto;
+}
+
+footer #footer {
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer h2 {
+    color: #DD5A5A;
+    font-size: 40px;
+}
+
+footer #whoWeAre {
+    display: block;
+    width: 500px;
+    float: left;
+    margin: 10px auto 40px auto;
+    overflow: auto;
+}
+
+footer #whoWeAre h2 {
+    color: #DD5A5A;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    width: 300px;
+    margin-bottom: 0px;
+}
+
+#whoWeAre #leftColumn {
+    float: left;
+    display: block;
+}
+
+#whoWeAre #rightColumn {
+    float: right;
+    display: block;
+}
+
+#instagram ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#instagram li {
+    padding: 3px;
+}
+
+#instagram li a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+#instagram li a:hover {
+    font-size: 23px;
+}
+
+#instagram li a:visited {
+    color: black;
+}
+
+footer img {
+    display: block;
+    width: 200px;
+    float: right;
+    margin: 80px auto;
+}
