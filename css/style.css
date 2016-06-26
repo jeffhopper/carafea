@@ -21,12 +21,13 @@ GA ATL FEWD9*/
 }
 
 body {
-    width: 1300px;
+    max-width: 1280px;
     margin: 0 auto;
+    font-size: 10px;
 }
 
 header {
-    background-image: url(../images/CF-header-background-bar.jpg);
+    background-image: url(../images/header-bg-no-bar.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -37,6 +38,14 @@ header {
     display: block;
     border-bottom: 10px solid #DD5A5A;
     position: relative;
+}
+
+div#headerLogo img {
+    width: 175px;
+    position: absolute;
+    top: 3%;
+    right: 15%;
+    z-index: 2;
 }
 
 #menuButton {
@@ -68,6 +77,7 @@ button#plus {
 
 ul#menu {
     position: absolute;
+    z-index: 1;
     top: 50px;
     width: 100%;
     background-color: rgba(255, 255, 255, 1);
@@ -207,18 +217,28 @@ img#polaroid {
 
 section#video {
     display: block;
-    /*PHOTO PLACE HOLDER*/
-    background-image: url(../images/dillandgonz.jpg);
-    background-size: cover;
     margin: 0 auto;
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+
+#video video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
 }
 
 #skate {
     display: block;
+    height: 720px;
+    background-color: rgba(37, 37, 43, 0.5);
     margin: 0 auto;
-    padding: 150px;
-    position: relative;
-    width: 750px;
+    padding: 15px 0 15px 0;
+    width: 100%;
     text-align: center;
     color: white;
 }
@@ -256,6 +276,7 @@ p#links a:hover {
 /*FOOTER*/
 
 footer {
+    position: relative;
     width: 1300px;
     overflow: auto;
 }
