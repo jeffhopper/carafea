@@ -38,6 +38,7 @@ header {
     display: block;
     border-bottom: 10px solid #DD5A5A;
     position: relative;
+    overflow: hidden;
 }
 
 div#headerLogo img {
