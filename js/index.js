@@ -4,5 +4,11 @@ jQuery(document).ready(function($) {
         $('#plus').toggleClass('rotate');
         // SHOW MENU
         $('#menu').toggleClass('show');
+        // CHANGE LOGO COLOR
+        $('#heroLogo img#pink').toggleClass('show');
     });
+
 });
+   
+
+	
