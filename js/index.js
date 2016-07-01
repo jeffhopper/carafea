@@ -3,12 +3,9 @@ jQuery(document).ready(function($) {
     $('#plus').click(function() {
         $('#plus').toggleClass('rotate');
         // SHOW MENU
-        $('#menu').toggleClass('show');
+        $('nav').toggleClass('show');
         // CHANGE LOGO COLOR
-        $('#heroLogo img#pink').toggleClass('show');
+        // $('#heroLogo img#pink').toggleClass('show');
     });
 
 });
-   
-
-	

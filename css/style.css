@@ -2,18 +2,6 @@
 CARA FEA FINAL PROJECT
 GA ATL FEWD9*/
 
-
-/*apply master html font size and rem/em font values for responsive design*/
-
-
-/* APPLY PARALLAX */
-
-
-/*
-*
-*
-*/
-
 *,
 *:before,
 *:after {
@@ -48,74 +36,68 @@ body {
 }
 
 div#heroLogo img#white {
-    width: 175px;
+    width: 185px;
     position: absolute;
     top: 30px;
     right: 150px;
-    z-index: 199;
 }
 
-div#heroLogo img#pink {
-    width: 175px;
+nav img#pink {
+    width: 185px;
     position: absolute;
-    top: 30px;
+    top: 10px;
     right: 150px;
     z-index: 200;
-    visibility: hidden;
-    /*transition: all 0.2s;*/
 }
 
-div#heroLogo img#pink.show {
-    visibility: visible;
-}
-
-button#plus {
+div#plus {
     position: absolute;
-    top: 40px;
-    left: 170px;
+    top: 30px;
+    left: 10%;
     display: block;
     z-index: 200;
-    border: none;
-    background-color: transparent;
     font-size: 80px;
     font-weight: bold;
     color: white;
     margin: 0 auto;
-    outline: none;
-    transition: all 0.3s;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
-#plus.rotate {
+div#plus.rotate {
     transform: rotate(225deg);
     color: #DD5A5A;
+    top: 40px;
 }
 
-ul#menu {
+nav {
     position: absolute;
     z-index: 100;
     top: 20px;
     width: 100%;
     background-color: white;
-    transition: all 0.3s;
+    transition: all 0.5s ease-out;
     height: 0;
     display: block;
     overflow: hidden;
 }
 
-ul#menu.show {
-    height: 100px;
+ul#menu {
+    position: relative;
+    margin-left: 15%;
+}
+
+nav.show {
+    height: 120px;
 }
 
 ul#menu li {
+    text-align: center;
     display: inline-block;
-    padding: 40px 4%;
-    /*height: 80px;*/
+    padding: 35px 4%;
+    width: 20%;
     font-size: 25px;
     color: #DD5A5A;
-}
-
-ul#menu li:first-child {
-    margin-left: 190px;
 }
 
 ul#menu li:hover {
@@ -125,24 +107,25 @@ ul#menu li:hover {
 
 div#title {
     display: block;
-    margin-right: 25%;
-    margin-left: 35%;
+    width: 50%;
     position: relative;
-    top: 70px;
+    top: 80px;
+    left: -50px;
     float: right;
 }
 
 h1 {
     color: white;
     font-size: 70px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 185px;
 }
 
-#title p {
+#hero #title p {
     color: white;
     font-size: 15px;
     margin-top: 0px;
+    padding-left: 5px;
 }
 
 
@@ -191,7 +174,7 @@ button#scroll {
 section#center {
     background-image: url(../images/faded-japan-street.jpg);
     background-size: cover;
-    height: 800px;
+    height: 650px;
     border-top: 60px solid white;
     border-bottom: 60px solid white;
 }
@@ -200,7 +183,7 @@ div#about {
     width: 900px;
     display: block;
     position: relative;
-    margin: 100px auto;
+    margin: 20px auto;
     overflow: auto;
 }
 
@@ -238,9 +221,7 @@ section#video {
     margin: 0 auto;
     position: relative;
     width: 100vw;
-    height: 100%;
     overflow: hidden;
-    background-color: rgba(37, 37, 43, 0.5);
 }
 
 #video video {
@@ -255,9 +236,9 @@ section#video {
 
 #skate {
     display: block;
-    height: 720px;
-    margin: 0 auto;
-    padding: 15px 0 15px 0;
+    height: 300px;
+    margin: 175px auto;
+    padding-top: 50px;
     width: 100%;
     text-align: center;
     color: white;
@@ -271,20 +252,22 @@ section#video {
     font-size: 20px;
 }
 
-#skate p#links {
-    font-size: 50px;
+#skate h1#links {
+    font-size: 70px;
     color: #DD5A5A;
     font-weight: bold;
     margin: 20px;
+    ;
 }
 
-p#links a:hover {
+h1#links a:hover {
     color: #18A5F2;
 }
 
 #skate a {
     color: #DD5A5A;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 #skate a:visited {
@@ -303,7 +286,7 @@ footer {
 }
 
 footer #footer {
-    width: 900px;
+    width: 65%;
     display: block;
     margin: 0 auto;
 }
@@ -356,7 +339,7 @@ footer #whoWeAre h2 {
 }
 
 #instagram li a:hover {
-    font-size: 23px;
+    text-decoration: line-through;
 }
 
 #instagram li a:visited {
@@ -369,3 +352,117 @@ footer img {
     float: right;
     margin: 80px auto;
 }
+
+
+/******* MEDIA QUERIES ******/
+
+
+/*SMALL DEVICE*/
+
+@media only screen and (max-width: 480px) {
+    div#plus {
+        top: 10px;
+        left: 30px;
+        font-size: 4rem;
+    }
+    div#plus.rotate {
+        top: 10px;
+    }
+    nav {
+        top: 0px;
+        margin: 0 auto;
+    }
+    nav.show {
+        height: 120px;
+    }
+    ul#menu {
+        margin-top: 87px;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    ul#menu li {
+        display: inline-block;
+        padding: 8px;
+        font-size: 20px;
+        color: #DD5A5A;
+        width: 32%;
+    }
+    ul#menu li:first-child {}
+    div#heroLogo img#white {
+        width: 120px;
+        top: 20px;
+        right: 20px;
+    }
+    nav img#pink {
+        width: 120px;
+        top: 15px;
+        right: 20px;
+    }
+    div#title {
+        display: block;
+        width: 90%;
+        position: relative;
+        top: 50px;
+        left: 50px;
+    }
+    div#title h1 {
+        margin-top: 45%
+    }
+    section#center {
+        border-top: 20px solid white;
+        border-bottom: 20px solid white;
+        height: 400px;
+    }
+    div#about {
+        width: 100%;
+    }
+    div#theseGuys {
+        width: 60%;
+    }
+    div#theseGuys h1 {
+        font-size: 26px;
+        margin-top: 0px;
+    }
+    div#theseGuys p {
+        font-size: 14px;
+        font-weight: normal;
+        width: 100%;
+    }
+    img#polaroid {
+        margin: 40px auto;
+        max-width: 35%;
+    }
+    #skate {
+        height: 190px;
+        margin: 0 auto;
+        padding-top: 8px;
+    }
+    #skate h1#links {
+        font-size: 42px;
+    }
+    #instagram li a {
+        font-size: 18px;
+    }
+    #whoWeAre #leftColumn {
+        float: none;
+    }
+    #whoWeAre #rightColumn {
+        float: none;
+        margin-top: -10px;
+    }
+    footer #footer {
+        width: 100%;
+    }
+    footer h2 {
+        font-size: 28px;
+        width: 100%;
+    }
+    footer #whoWeAre {
+        width: 55%;
+        overflow: auto;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    footer img {
+        width: 35%;
+    }
