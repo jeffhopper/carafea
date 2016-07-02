@@ -1,4 +1,4 @@
-/*JEFF HOPPER
+    /*JEFF HOPPER
 CARA FEA FINAL PROJECT
 GA ATL FEWD9*/
 
@@ -12,6 +12,12 @@ body {
     max-width: 100vw;
     margin: 0 auto;
     font-size: 10px;
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: #DD5A5A;
 }
 
 .container {
@@ -31,7 +37,7 @@ body {
     margin: auto;
     display: block;
     border-bottom: 10px solid #DD5A5A;
-    position: relative;
+    position: fixed;
     overflow: hidden;
 }
 
@@ -60,14 +66,14 @@ div#plus {
     font-weight: bold;
     color: white;
     margin: 0 auto;
-    transition: all 0.5s;
+    transition: all 0.3s;
     cursor: pointer;
 }
 
 div#plus.rotate {
-    transform: rotate(225deg);
+    transform: rotate(315deg);
     color: #DD5A5A;
-    top: 40px;
+    top: 30px;
 }
 
 nav {
@@ -76,7 +82,7 @@ nav {
     top: 20px;
     width: 100%;
     background-color: white;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
     height: 0;
     display: block;
     overflow: hidden;
@@ -94,13 +100,19 @@ nav.show {
 ul#menu li {
     text-align: center;
     display: inline-block;
-    padding: 35px 4%;
     width: 20%;
-    font-size: 25px;
-    color: #DD5A5A;
+    text-align: center;
 }
 
-ul#menu li:hover {
+Ul#menu li a {
+    display: block;
+    text-decoration: none;
+    color: #DD5A5A;
+    font-size: 25px;
+    padding: 35px 20%;
+}
+
+ul#menu li a:hover {
     color: white;
     background-color: #DD5A5A;
 }
@@ -128,18 +140,26 @@ h1 {
     padding-left: 5px;
 }
 
+#invisible{
+    /*visibility: hidden;*/
+    height: 100vh;
+    width: 100vw;
+    z-index: -500;
+}
 
 /*SCROLL BUTTON*/
 
 div#scrollButton {
-    padding: 30px;
+    padding: 20px;
     clear: both;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    top: -130px;
+    top: -110px;
     display: block;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.2);
 }
 
 button#scroll {
@@ -147,6 +167,8 @@ button#scroll {
     height: 70px;
     width: 70px;
     border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
     border: 5px solid white;
     color: #EA3838;
     background-color: transparent;
@@ -165,7 +187,8 @@ button#scroll {
 
 #loose {
     position: relative;
-    z-index: 200;
+    z-index: 100;
+    width: 100vw;
 }
 
 
@@ -175,27 +198,27 @@ section#center {
     background-image: url(../images/faded-japan-street.jpg);
     background-size: cover;
     height: 650px;
+    width: 100vw;
     border-top: 60px solid white;
     border-bottom: 60px solid white;
 }
 
 div#about {
-    width: 900px;
+    max-width: 80%;
     display: block;
     position: relative;
-    margin: 20px auto;
-    overflow: auto;
+    margin: 0 auto;
 }
 
 div#theseGuys {
     position: relative;
     float: left;
-    width: 500px;
+    width: 60%;
     margin: 0;
 }
 
 div#theseGuys h1 {
-    font-size: 70px;
+    font-size: 60px;
     color: #DD5A5A;
     margin-top: 70px;
 }
@@ -205,12 +228,16 @@ div#theseGuys p {
     font-weight: bold;
 }
 
-img#polaroid {
+div#polaroid {
+    width: 25%;
     display: block;
     float: right;
-    max-width: 250px;
-    margin: 60px;
     position: relative;
+}
+
+#polaroid img {
+    max-width: 250px;
+    margin: 30% 0;
 }
 
 
@@ -257,11 +284,6 @@ section#video {
     color: #DD5A5A;
     font-weight: bold;
     margin: 20px;
-    ;
-}
-
-h1#links a:hover {
-    color: #18A5F2;
 }
 
 #skate a {
@@ -270,9 +292,8 @@ h1#links a:hover {
     transition: color 0.3s;
 }
 
-#skate a:visited {
-    text-decoration: none;
-    color: #DD5A5A;
+#skate a:hover {
+    color: #18A5F2;
 }
 
 
@@ -280,16 +301,13 @@ h1#links a:hover {
 
 footer {
     position: relative;
-    width: 100%;
+    width: 100vw;
     overflow: auto;
     background-color: white;
+    margin: 0 auto;
+    padding:0 5%;
 }
 
-footer #footer {
-    width: 65%;
-    display: block;
-    margin: 0 auto;
-}
 
 footer h2 {
     color: #DD5A5A;
@@ -300,7 +318,7 @@ footer #whoWeAre {
     display: block;
     width: 500px;
     float: left;
-    margin: 10px auto 40px auto;
+    margin: 10px auto 20px auto;
     overflow: auto;
 }
 
@@ -350,7 +368,7 @@ footer img {
     display: block;
     width: 200px;
     float: right;
-    margin: 80px auto;
+    margin: 80px 70px 0 0;
 }
 
 
@@ -373,21 +391,24 @@ footer img {
         margin: 0 auto;
     }
     nav.show {
-        height: 120px;
+        height: 130px;
     }
     ul#menu {
-        margin-top: 87px;
-        margin-left: 0px;
+        margin-top: 90px;
+        margin-left: 5px;
         padding-left: 0px;
     }
     ul#menu li {
+        text-align: center;
         display: inline-block;
-        padding: 8px;
-        font-size: 20px;
-        color: #DD5A5A;
         width: 32%;
     }
-    ul#menu li:first-child {}
+    ul#menu li a {
+        display: block;
+        padding: 0px;
+        font-size: 22px;
+        color: #DD5A5A;
+    }
     div#heroLogo img#white {
         width: 120px;
         top: 20px;
@@ -411,34 +432,42 @@ footer img {
     section#center {
         border-top: 20px solid white;
         border-bottom: 20px solid white;
-        height: 400px;
+        height: 350px;
     }
     div#about {
         width: 100%;
     }
     div#theseGuys {
         width: 60%;
+        margin-left: -15px;
     }
     div#theseGuys h1 {
-        font-size: 26px;
-        margin-top: 0px;
+        font-size: 20px;
+        margin-top: 40px;
     }
     div#theseGuys p {
         font-size: 14px;
         font-weight: normal;
         width: 100%;
     }
-    img#polaroid {
+    div#polaroid {
+        width: 35%;
+        margin-right: 10px;
+    }
+    #polaroid img {
         margin: 40px auto;
-        max-width: 35%;
+        max-width: 125px;
     }
     #skate {
-        height: 190px;
+        height: 175px;
         margin: 0 auto;
         padding-top: 8px;
     }
     #skate h1#links {
-        font-size: 42px;
+        font-size: 36px;
+    }
+    #skate p {
+        font-size: 10px;
     }
     #instagram li a {
         font-size: 18px;
@@ -451,18 +480,20 @@ footer img {
         margin-top: -10px;
     }
     footer #footer {
-        width: 100%;
+        /*width: 100%;*/
     }
-    footer h2 {
-        font-size: 28px;
-        width: 100%;
+    footer #whoWeAre h2 {
+        font-size: 25px;
+        width: 190px;
     }
     footer #whoWeAre {
-        width: 55%;
+        width: 65%;
         overflow: auto;
-        margin-left: 20px;
+        margin-left: 30px;
         margin-bottom: 10px;
     }
     footer img {
-        width: 35%;
+        width: 60%;
+        float: none;
+        margin: 0 auto;
     }
