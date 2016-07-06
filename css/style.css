@@ -1,4 +1,4 @@
-    /*JEFF HOPPER
+/*JEFF HOPPER
 CARA FEA FINAL PROJECT
 GA ATL FEWD9*/
 
@@ -8,20 +8,16 @@ GA ATL FEWD9*/
     box-sizing: border-box;
 }
 
-body {
-    max-width: 100vw;
-    margin: 0 auto;
-    font-size: 10px;
-
-}
-
 a:visited {
     text-decoration: none;
     color: #DD5A5A;
 }
 
+
+/*** HOME PAGE ***/
+
 .container {
-    width: 90%;
+    width: 92%;
     margin: 0 auto;
 }
 
@@ -36,7 +32,7 @@ a:visited {
     width: 100vw;
     margin: auto;
     display: block;
-    border-bottom: 10px solid #DD5A5A;
+    border-bottom: 15px solid #DD5A5A;
     position: fixed;
     overflow: hidden;
 }
@@ -45,24 +41,16 @@ div#heroLogo img#white {
     width: 185px;
     position: absolute;
     top: 30px;
-    right: 150px;
-}
-
-nav img#pink {
-    width: 185px;
-    position: absolute;
-    top: 10px;
-    right: 150px;
-    z-index: 200;
+    right: 10%;
 }
 
 div#plus {
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 10%;
     display: block;
     z-index: 200;
-    font-size: 80px;
+    font-size: 100px;
     font-weight: bold;
     color: white;
     margin: 0 auto;
@@ -73,56 +61,69 @@ div#plus {
 div#plus.rotate {
     transform: rotate(315deg);
     color: #DD5A5A;
-    top: 30px;
+    top: 20px;
 }
 
-nav {
+
+/* NAVIGATION BAR */
+
+#navHome {
     position: absolute;
     z-index: 100;
-    top: 20px;
+    top: 30px;
     width: 100%;
     background-color: white;
     transition: all 0.3s ease-out;
     height: 0;
     display: block;
     overflow: hidden;
+    /*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);*/
 }
 
-ul#menu {
+#navHome img#pink {
+    width: 185px;
+    position: absolute;
+    top: 0px;
+    right: 10%;
+    z-index: 200;
+}
+
+#navHome ul {
     position: relative;
-    margin-left: 15%;
+    margin: 0 0 0 15%;
 }
 
-nav.show {
-    height: 120px;
+#navHome.show {
+    height: 100px;
 }
 
-ul#menu li {
+#navHome ul li {
     text-align: center;
     display: inline-block;
     width: 20%;
     text-align: center;
 }
 
-Ul#menu li a {
+#navHome ul li a {
     display: block;
     text-decoration: none;
     color: #DD5A5A;
     font-size: 25px;
-    padding: 35px 20%;
+    padding: 37px 0 37px 0;
+    transition: all 0.1s;
 }
 
-ul#menu li a:hover {
+#navHome ul li a:hover {
     color: white;
     background-color: #DD5A5A;
 }
 
 div#title {
     display: block;
-    width: 50%;
     position: relative;
-    top: 80px;
-    left: -50px;
+    top: 250px;
+    width: 50%;
+    left: -80px;
     float: right;
 }
 
@@ -130,7 +131,6 @@ h1 {
     color: white;
     font-size: 70px;
     margin-bottom: 10px;
-    margin-top: 185px;
 }
 
 #hero #title p {
@@ -140,37 +140,41 @@ h1 {
     padding-left: 5px;
 }
 
-#invisible{
+#invisible {
     /*visibility: hidden;*/
     height: 100vh;
     width: 100vw;
     z-index: -500;
 }
 
+
 /*SCROLL BUTTON*/
 
 div#scrollButton {
-    padding: 20px;
     clear: both;
     position: absolute;
-    left: 0;
-    right: 0;
     margin: auto;
     top: -110px;
     display: block;
     width: 100vw;
-    background-color: rgba(0,0,0,0.2);
+    transition: visibility 0.5s, opacity 0.5s;
+}
+
+div#scrollButton.hide {
+    visibility: collapse;
+    opacity: 0;
 }
 
 button#scroll {
-    font-size: 40px;
-    height: 70px;
-    width: 70px;
+    font-size: 50px;
+    font-weight: bold;
+    height: 75px;
+    width: 75px;
     border-radius: 40px;
     -moz-border-radius: 40px;
     -webkit-border-radius: 40px;
     border: 5px solid white;
-    color: #EA3838;
+    color: #DD5A5A;
     background-color: transparent;
     transform: rotate(-90deg);
     display: block;
@@ -199,28 +203,31 @@ section#center {
     background-size: cover;
     height: 650px;
     width: 100vw;
-    border-top: 60px solid white;
-    border-bottom: 60px solid white;
+    border-top: 40px solid white;
+    border-bottom: 40px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div#about {
-    max-width: 80%;
-    display: block;
-    position: relative;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
 }
 
 div#theseGuys {
     position: relative;
     float: left;
-    width: 60%;
-    margin: 0;
+    max-width: 600px;
+    margin: 0 50px 0 20px;
 }
 
 div#theseGuys h1 {
     font-size: 60px;
     color: #DD5A5A;
-    margin-top: 70px;
+    margin-top: 0px;
 }
 
 div#theseGuys p {
@@ -229,46 +236,37 @@ div#theseGuys p {
 }
 
 div#polaroid {
-    width: 25%;
-    display: block;
-    float: right;
-    position: relative;
+    max-width: 250px;
+    margin-right: 20px;
 }
 
 #polaroid img {
-    max-width: 250px;
-    margin: 30% 0;
+    max-width: 100%;
 }
 
 
 /*VIDEO*/
 
-section#video {
-    display: block;
-    margin: 0 auto;
+section#video-container {
     position: relative;
-    width: 100vw;
-    overflow: hidden;
 }
 
-#video video {
+#video-container video {
     width: 100vw;
+    height: auto;
+    vertical-align: middle;
+    z-index: -100;
+}
+
+#skate {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -100;
-}
-
-#skate {
-    display: block;
-    height: 300px;
-    margin: 175px auto;
-    padding-top: 50px;
-    width: 100%;
-    text-align: center;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #skate h1 {
@@ -305,9 +303,13 @@ footer {
     overflow: auto;
     background-color: white;
     margin: 0 auto;
-    padding:0 5%;
+    padding: 0 5%;
 }
 
+#footerWrap {
+    width: 85%;
+    margin: 0 auto;
+}
 
 footer h2 {
     color: #DD5A5A;
@@ -316,7 +318,7 @@ footer h2 {
 
 footer #whoWeAre {
     display: block;
-    width: 500px;
+    max-width: 500px;
     float: left;
     margin: 10px auto 20px auto;
     overflow: auto;
@@ -333,6 +335,7 @@ footer #whoWeAre h2 {
 #whoWeAre #leftColumn {
     float: left;
     display: block;
+    padding-right: 30px;
 }
 
 #whoWeAre #rightColumn {
@@ -364,20 +367,328 @@ footer #whoWeAre h2 {
     color: black;
 }
 
+#footerLogo {
+    cursor: pointer;
+}
+
 footer img {
     display: block;
     width: 200px;
     float: right;
-    margin: 80px 70px 0 0;
+    margin: 80px 0 0 0;
 }
 
 
-/******* MEDIA QUERIES ******/
+/******* GALLERY PAGE ********/
+
+#nav2 {
+    position: fixed;
+    float: left;
+    height: 100vh;
+    width: 150px;
+    z-index: 200;
+    background-color: white;
+    transition: all 0.3s ease-out;
+    display: block;
+    /*overflow: hidden;*/
+    border-right: 3px solid #DD5A5A;
+}
+
+#navImg {
+    display: block;
+    position: fixed;
+    background-color: #DD5A5A;
+    height: 150px;
+    z-index: 200;
+    width: 150px;
+    cursor: pointer;
+}
+
+#nav2 img#white {
+    width: 140px;
+    position: absolute;
+    top: 30px;
+}
+
+#nav2 ul {
+    position: relative;
+    top: 130px;
+    padding: 0;
+}
+
+#nav2 ul li {
+    text-align: center;
+    display: block;
+    text-align: center;
+}
+
+#nav2 ul li a {
+    display: block;
+    text-decoration: none;
+    color: #DD5A5A;
+    font-size: 20px;
+    padding: 28px 0 28px 0;
+    transition: all 0.1s;
+}
+
+#nav2 ul li a.this {
+    background-color: #DD5A5A;
+    color: white;
+}
+
+#nav2 ul li a:hover {
+    color: white;
+    background-color: #DD5A5A;
+}
+
+#main {
+    display: block;
+    position: absolute;
+    left: 160px;
+    height: 100vh;
+}
+
+#post-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.post {
+    display: block;
+    position: relative;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.post img {
+    display: block;
+    height: 100%;
+}
+
+.post video {
+    display: block;
+    height: 100%;
+}
 
 
-/*SMALL DEVICE*/
+/* JUNE POST */
 
-@media only screen and (max-width: 480px) {
+#june::before {
+    content: "JUNE";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+#june:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 80px;
+}
+
+
+/* JULY POST */
+
+#july::before {
+    content: "JULY";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+#july:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 80px;
+}
+
+
+/* MAY POST */
+
+#may::before {
+    content: "MAY";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+#may:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 80px;
+}
+
+
+/* APRIL */
+
+#april::before {
+    content: "APRIL";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+#april:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 80px;
+}
+
+
+/******* CONTACT PAGE ********/
+
+#content {
+    display: flex;
+    position: absolute;
+    padding-left: 160px;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+#content a{
+    font-size: 80px;
+    text-decoration: none;
+}
+
+/******* GOODS PAGE *******/
+#soon{
+    display: block;
+    position: absolute;
+    left:160px;
+    top:240px;
+    width: 200px;
+    height: 20px;
+    font-size: 20px;
+}
+
+/*
+*
+*
+*
+*
+*
+*/
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px) {
+    div#heroLogo img#white {
+        right: 5%;
+    }
+    #navHome img#pink {
+        right: 5%;
+    }
+    div#plus {
+        left: 8%;
+    }
+    div#title {
+        left: -10%;
+    }
+    #skate h1#links {
+        font-size: 50px;
+    }
+    #footerWrap {
+        width: 100%;
+    }
+}
+
+
+/*MEDIUM DEVICE*/
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    div#heroLogo img#white {
+        right: 3%;
+    }
+    #navHome img#pink {
+        right: 3%;
+    }
+    #navHome ul li a {
+        font-size: 22px;
+    }
+    div#plus {
+        left: 7%;
+    }
+    div#title {
+        width: 70%;
+        left: 0;
+    }
+    #navHome {
+        top: 30px;
+        margin: 0 auto;
+    }
+    #navHome.show {
+        height: 170px;
+    }
+    #navHome ul {
+        margin-top: 120px;
+        margin-left: 5px;
+        padding-left: 0px;
+        width: 100%;
+    }
+    #navHome ul li {
+        text-align: center;
+        display: inline-block;
+        width: 32%;
+    }
+    #navHome ul li a {
+        display: block;
+        padding: 13px;
+        font-size: 25px;
+        color: #DD5A5A;
+    }
+}
+
+
+/* MOBILE DEVICE */
+
+@media only screen and (min-width: 320px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     div#plus {
         top: 10px;
         left: 30px;
@@ -386,24 +697,24 @@ footer img {
     div#plus.rotate {
         top: 10px;
     }
-    nav {
+    #navHome {
         top: 0px;
         margin: 0 auto;
     }
-    nav.show {
+    #navHome.show {
         height: 130px;
     }
-    ul#menu {
+    #navHome ul {
         margin-top: 90px;
         margin-left: 5px;
         padding-left: 0px;
     }
-    ul#menu li {
+    #navHome ul li {
         text-align: center;
         display: inline-block;
         width: 32%;
     }
-    ul#menu li a {
+    #navHome ul li a {
         display: block;
         padding: 0px;
         font-size: 22px;
@@ -414,20 +725,28 @@ footer img {
         top: 20px;
         right: 20px;
     }
-    nav img#pink {
+    #navHome img#pink {
         width: 120px;
         top: 15px;
         right: 20px;
     }
     div#title {
         display: block;
-        width: 90%;
+        width: 80%;
         position: relative;
-        top: 50px;
-        left: 50px;
+        top: 250px;
+        left: 0px;
+        margin: 0 auto;
+        /*float: none;*/
     }
     div#title h1 {
-        margin-top: 45%
+        margin-top: 10%;
+        font-size: 58px;
+    }
+    button#scroll {
+        font-size: 44px;
+        height: 65px;
+        width: 65px;
     }
     section#center {
         border-top: 20px solid white;
@@ -439,7 +758,7 @@ footer img {
     }
     div#theseGuys {
         width: 60%;
-        margin-left: -15px;
+        margin-left: 12px;
     }
     div#theseGuys h1 {
         font-size: 20px;
@@ -451,49 +770,60 @@ footer img {
         width: 100%;
     }
     div#polaroid {
-        width: 35%;
+        max-width: 165px;
         margin-right: 10px;
     }
     #polaroid img {
         margin: 40px auto;
-        max-width: 125px;
+        max-width: 100%;
     }
     #skate {
-        height: 175px;
-        margin: 0 auto;
-        padding-top: 8px;
+        text-align: center;
     }
     #skate h1#links {
-        font-size: 36px;
+        font-size: 32px;
     }
     #skate p {
         font-size: 10px;
     }
-    #instagram li a {
-        font-size: 18px;
+    footer {
+        padding: 0 4%;
+    }
+    #footerWrap {
+        max-width: 310px;
+    }
+    footer #whoWeAre {
+        width: 100%;
+        overflow: auto;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid black;
     }
     #whoWeAre #leftColumn {
-        float: none;
+        float: left;
+        width: 45%;
     }
     #whoWeAre #rightColumn {
-        float: none;
-        margin-top: -10px;
-    }
-    footer #footer {
-        /*width: 100%;*/
+        float: right;
+        wdith: 45%;
     }
     footer #whoWeAre h2 {
         font-size: 25px;
-        width: 190px;
+        width: 100%;
     }
-    footer #whoWeAre {
-        width: 65%;
-        overflow: auto;
-        margin-left: 30px;
-        margin-bottom: 10px;
+    #instagram li a {
+        font-size: 14px;
     }
     footer img {
-        width: 60%;
+        width: 50%;
         float: none;
         margin: 0 auto;
+    }
+    @media only screen and (max-width: 400px) {
+        div#title {
+            width: 90%;
+        }
+        div#title h1 {
+            font-size: 50px;
+        }
     }
